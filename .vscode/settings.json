@@ -1,0 +1,14 @@
+// {
+//   "better-phpunit.phpunitBinary": ""
+// }
+{
+  "better-phpunit.docker.enable": true,
+  // "better-phpunit.docker.command": "docker exec micro-videos-app",
+  "better-phpunit.docker.command": "cd ${workspaceFolder}/microsservicos/videos && docker-compose exec app",
+  "better-phpunit.docker.paths": {
+    "${workspaceFolder}/microsservicos/videos": "/var/www"
+  },
+  "better-phpunit.phpunitBinary": "/var/www/vendor/bin/phpunit",
+  // "better-phpunit.suiteSuffix": "/var/www/tests",
+  "better-phpunit.commandSuffix": "--colors=auto"
+}
